@@ -74,6 +74,7 @@ RUN pip install setuptools \
     && git checkout v3.1.1 \
     && git apply /home/whisperX_3.1.1.patch \
     && pip install --no-build-isolation .
+RUN pip install "setuptools>=77.0.3,<80"
 ENV CT2_CUDA_ALLOCATOR=cub_caching 
 ENV CT2_CUDA_CACHING_ALLOCATOR_CONFIG=4,3,12,419430400 
 #RUN pip install --upgrade pip
